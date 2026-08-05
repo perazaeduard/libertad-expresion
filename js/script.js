@@ -83,3 +83,26 @@ elementos.forEach(el=>{
 });
 
 console.log("Libertad de Expresión cargada correctamente.");
+
+// ===========================
+// MENÚ HAMBURGUESA
+// ===========================
+
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
+
+if(menuToggle && navMenu){
+
+    menuToggle.addEventListener("click",()=>{
+
+        navMenu.classList.toggle("active");
+
+        if(navMenu.classList.contains("active")){
+            menuToggle.innerHTML="✕";
+        }else{
+            menuToggle.innerHTML="☰";
+        }
+
+    });
+
+}
